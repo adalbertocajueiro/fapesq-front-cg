@@ -3,7 +3,6 @@ import {Tabs,Tab} from 'react-bootstrap'
 import Registros from './Registros'
 import HistoricoPB from './HistoricoPB'
 
-
 function TabFiltros(){
 
 	return(

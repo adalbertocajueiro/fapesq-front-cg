@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {Route,Switch,Link} from 'react-router-dom'
-import {Button,Card,OverlayTrigger,Tooltip,Popover} from 'react-bootstrap'
+import {Button,Card,OverlayTrigger,Tooltip,Popover,Image} from 'react-bootstrap'
 import TabFiltros from './views/TabFiltros'
 import Base from './views/Base'
 import Sobre from './views/Sobre'
@@ -108,8 +108,8 @@ function MainPanel() {
 						  </Card.Body>
 					</Card>
 				</div>
-				<div className='col pl-0 pr-0'>
-						<img src = {Logo} alt  = " "/>
+				<div className='col pl-0 pr-0 h-120px'>			
+						<Image src={Logo} fluid className='h-120px contains rounded'/>
 				</div>
 			</div>
 			<div className='row mt-2 mr-4 pl-4 w-100'>

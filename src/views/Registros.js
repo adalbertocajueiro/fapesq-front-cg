@@ -7,8 +7,8 @@ import ModalViewRegistro from './ModalViewRegistro'
 import context from '../utils/Context'
 
 function Registros(){
-	const { state,setReloadDataInfo } = React.useContext(context);
-	const [registros,setRegistros] = React.useState(undefined);
+	const { state } = React.useContext(context);
+	const [registros,setRegistros] = React.useState(state.dataInfo);
 	const [registrosFiltrados, setRegistrosFiltrados] = React.useState([]);
 	const [estados,setEstados] = React.useState([]);
 	const [municipiosFiltrados,setMunicipiosFiltrados] = React.useState([]);
@@ -28,6 +28,7 @@ function Registros(){
 	const [firstRecord,setFirstRecord] = React.useState(1);
 	const [lastRecord,setLastRecord] = React.useState(19);
 	const [registrosExibidos,setRegistrosExibidos] = React.useState([]);
+
 
   	const handleClose = () => {
   		setShow(false)
@@ -102,10 +103,9 @@ function Registros(){
 		setRegistrosExibidos(registrosFiltrados.slice(primeiroRegistro,Math.min(ultimoRegistro +1,registrosFiltrados.length)))
 	}
 
-	
-
     useEffect(() => {
-        
+    	console.log('State',state)
+        console.log('Data info',state.dataInfo)
         if(state.dataInfo){
         	setRegistros(state.dataInfo)
         	setRegistrosExibidos(state.dataInfo.records.slice(0,20))
@@ -118,14 +118,6 @@ function Registros(){
             //console.log('Resultados',resultados)
 			var paginasAMostrar = Math.ceil(state.dataInfo.records.length/numeroRegistrosExibidos);
 			setMaxPage(paginasAMostrar)
-        }else{
-        	
-        	setTimeout(function(){
-				//atualizar a lista das obras
-				setReloadDataInfo(true)
-			},100)
-			
-
         }
       },[state.dataInfo] );
 
