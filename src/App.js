@@ -14,24 +14,35 @@ function App() {
     dataInfo:undefined,
     historicoPB:undefined
   });
+  const [reloadDataInfo,setReloadDataInfo] = React.useState(true);
 
   useEffect(() => {
+    console.log('Reload dada info', reloadDataInfo)
     const fetchData = async () => {
-      const dataInfoBuscado = await axios.get(BACK_END_URL+'/registros');
-      setState({ ...state,  dataInfo:dataInfoBuscado.data});
+      
+        
+        const dataInfoBuscado = await axios.get(BACK_END_URL+'/registros');
+        setState({ ...state,  dataInfo:dataInfoBuscado.data});
 
-      const historicoPBBuscado = await axios.get(BACK_END_URL+'/pbdatafiltered');
-      setState({ ...state,  historicoPB:historicoPBBuscado.data});
+        const historicoPBBuscado = await axios.get(BACK_END_URL+'/pbdatafiltered');
+        setState({ ...state,  historicoPB:historicoPBBuscado.data});
+      
+        
+
     }
-    
-    fetchData();  
-  },[] );
+  if(reloadDataInfo){
+    fetchData();
+    setReloadDataInfo(false)
+  }
+
+  },[reloadDataInfo]);
   
 
   return (
     <Provider
       value={{
-        state
+        state,
+        setReloadDataInfo
       }}
     >
       <BrowserRouter>
