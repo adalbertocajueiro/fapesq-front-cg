@@ -4,11 +4,13 @@ import Edmar from '../img/Edmar.jpg'
 import Catherine from '../img/catherine.jpg'
 import Edson from '../img/Edson.jpg'
 import Arthur from '../img/Arthur.jpg'
+import Thyago from '../img/Thyago.jpg'
 
 
 class Cards extends Component{
     render(){
         return(
+            /* Imagens devem ter o mesmo tamanho em pixels se vao ficar lado a lado. */ 
             <div className  = "membros">
             <div className = "container-fluid d-flex justify-content-around">
 
@@ -26,11 +28,11 @@ class Cards extends Component{
                     page = "#"
                 /></div>
             </div>
-
+                <br/>
             <div className = "container-fluid d-flex justify-content-around">
 
                 <div className = "catherine"> <Card imgsrc = {Catherine} title ="Catherine Sonaly F. Martins"
-                    uni = "Hospital Universitário Alcides Carneiro  Universidade Federal de Campina Grande"
+                    uni = "Hospital Universitário Alcides Carneiro - UFCG"
                     phone =  "(83) 3322 - 4363"
                     email =""
                     page  = "#"
@@ -44,6 +46,16 @@ class Cards extends Component{
                     page = "#"
 
                 /> </div>
+
+            </div>
+                
+            <div className = "container-fluid d-flex justify-content-around">
+                <div className = "Thyago"> <Card imgsrc = {Thyago}
+                uni  = "Universidade Federal de Campina Grande"
+                phone = "Estudante de Ciências da Computação"
+                email = "thyago.pereira.silva@ccc.ufcg.edu.br"
+                page  =  "#"
+            /></div>
 
             </div>
 
