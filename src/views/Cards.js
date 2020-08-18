@@ -5,6 +5,7 @@ import Catherine from '../img/catherine.jpg'
 import Edson from '../img/Edson.jpg'
 import Arthur from '../img/Arthur.jpg'
 import Thyago from '../img/Thyago.jpg'
+import Elloa from '../img/Elloa.jpg'
 
 
 class Cards extends Component{
@@ -48,14 +49,22 @@ class Cards extends Component{
                 /> </div>
 
             </div>
-                
+                <br/>
             <div className = "container-fluid d-flex justify-content-around">
-                <div className = "Thyago"> <Card imgsrc = {Thyago}
+                <div className = "Thyago"> <Card imgsrc = {Thyago} title =  "Thyago Pereira da Silva"
                 uni  = "Universidade Federal de Campina Grande"
                 phone = "Estudante de Ciências da Computação"
                 email = "thyago.pereira.silva@ccc.ufcg.edu.br"
                 page  =  "#"
             /></div>
+
+                <div className  = "Elloa"> <Card imgsrc = {Elloa} title  = "Elloá B. Guedes"
+                    uni  = "Universidade do Estado do Amazonas"
+                    phone = "Líder do grupo de pesquisa LSI da UEA"
+                    email =  "ebgcosta@uea.edu.br"
+                    page  =  "http://www.elloaguedes.com"
+                /></div>
+
 
             </div>
 
