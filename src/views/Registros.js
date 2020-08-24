@@ -104,8 +104,6 @@ function Registros(){
 	}
 
     useEffect(() => {
-    	console.log('State',state)
-        console.log('Data info',state.dataInfo)
         if(state.dataInfo){
         	setRegistros(state.dataInfo)
         	setRegistrosExibidos(state.dataInfo.records.slice(0,20))
