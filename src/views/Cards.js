@@ -7,6 +7,7 @@ import Arthur from '../img/Arthur.jpg'
 import Thyago from '../img/Thyago.jpg'
 import Elloa from '../img/Elloa.jpg'
 import Paulo from '../img/Paulo.jpg'
+import Adalberto from '../img/Adalberto.jpg'
 
 class Cards extends Component{
     render(){
@@ -65,18 +66,23 @@ class Cards extends Component{
                     page  =  "http://www.elloaguedes.com"
                 /></div>
 
-
             </div>
             <br/>
             <div className = "container-fluid d-flex justify-content-around">
                 <div className = "Paulo"> <Card imgsrc = {Paulo} title = "Paulo Ribeiro Lins Júnior" 
-                    uni = "IFPB - Campus Campina Grande"
-                    phone = "Docente da Coordenação da Área de informática"
+                    uni = "Istituto Federal da Paraiba - Campus Campina Grande"
+                    phone = "Docente da Coordenação da Área de informática e pesquisador do Grupo - GComPI"
                     email =  "paulo.lins@ifpb.edu.br"
                     page  =  "#"
                     
                 /></div> 
-                
+                <div className =  "Adalberto"> <Card imgsrc = {Adalberto} title  = "Adalberto C. de Farias"
+                    uni  = "Universidade Federal de Campina Grande"
+                    phone  =  "Docente do Bacharelado em Ciência da Computação"
+                    email =  "adalberto@computacao.ufcg.edu.br"
+                    page = "http://lattes.cnpq.br/9462873740250320"
+
+                /></div>
 
                     
 
