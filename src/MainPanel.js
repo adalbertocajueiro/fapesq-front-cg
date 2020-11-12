@@ -8,7 +8,8 @@ import Sobre from './views/Sobre'
 import Tutorial from './views/Tutorial'
 import MapaCG from './views/MapaCG'
 import MapaPB from './views/MapaPB'
-import { BsListUl,BsCloudUpload,BsQuestionCircle,BsBook } from "react-icons/bs"
+import Alerta from './views/Alerta'
+import { BsListUl,BsCloudUpload,BsQuestionCircle,BsBook,BsAlarmFill } from "react-icons/bs"
 import { GrMapLocation,GrMap } from "react-icons/gr";
 import Logo from "./img/logo.jpg"
 
@@ -104,6 +105,20 @@ function MainPanel() {
 
 						      		</Link>
 						      	</div>
+										<div className='col-4 px-0'>
+						      		<Link to='/alerta' className='text-decoration-none'>
+						      			<OverlayTrigger 
+      										placement='right'
+										    overlay=
+										      <Tooltip id='tooltip-alertas'>
+										          Alertas no Google Mapas
+										      </Tooltip>
+										>
+						      				<Button className='pl-2 my-auto mx-auto' size="md" block variant='light'><BsAlarmFill className='bt-menu' /></Button>
+						      			</OverlayTrigger>
+
+						      		</Link>
+						      	</div>
 						    </div>
 						  </Card.Body>
 					</Card>
@@ -122,6 +137,7 @@ function MainPanel() {
 				          	<Route path='/mapacg' component={MapaCG}/>
 				          	<Route path='/help' component={Tutorial}/>
 				          	<Route path='/sobre' component={Sobre}/>
+										<Route path= '/alerta' component = {Alerta} />
 				        </Switch>
 				</div>
 				<div className='col bg-light'>

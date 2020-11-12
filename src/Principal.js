@@ -7,6 +7,7 @@ import Base from './views/Base'
 import Sobre from './views/Sobre'
 import MapaCG from './views/MapaCG'
 import MapaPB from './views/MapaPB'
+import Alerta from './views/Alerta'
 
 function Principal() {
   return (
@@ -20,6 +21,8 @@ function Principal() {
 						<Link to='/mapapb' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Mapa PB</Button></Link>
 						<Link to='/mapacg' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Mapa CG</Button></Link>
 						<Link to='/sobre' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Sobre</Button></Link>
+						<Link to='/alerta' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Sobre</Button></Link>
+
 					</div>
 					<div className='pt-2 mr-4 px-2 w-100'>
 					    <Switch>
@@ -29,6 +32,7 @@ function Principal() {
 				          	<Route path='/mapapb' component={MapaPB}/>
 				          	<Route path='/mapacg' component={MapaCG}/>
 				          	<Route path='/sobre' component={Sobre}/>
+										<Route path='/alerta' component={Alerta}/>
 				        </Switch>
 			        </div>
 				</div>
