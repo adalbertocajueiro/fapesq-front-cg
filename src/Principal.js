@@ -2,12 +2,16 @@ import React from 'react'
 
 import {Route,Switch,Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
-import Registros from './views/Registros'
 import Base from './views/Base'
 import Sobre from './views/Sobre'
 import MapaCG from './views/MapaCG'
 import MapaPB from './views/MapaPB'
+<<<<<<< Updated upstream
 import Alerta from './views/Alerta'
+=======
+import Registros from './views/Registros'
+
+>>>>>>> Stashed changes
 
 function Principal() {
   return (
@@ -26,7 +30,6 @@ function Principal() {
 					</div>
 					<div className='pt-2 mr-4 px-2 w-100'>
 					    <Switch>
-				          	<Route path='/' component={Registros} exact />
 				          	<Route path='/registros' component={Registros}/>
 				          	<Route path='/base' component={Base}/>
 				          	<Route path='/mapapb' component={MapaPB}/>

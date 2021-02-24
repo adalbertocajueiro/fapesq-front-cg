@@ -1,0 +1,23 @@
+#principal{
+    padding-bottom: 10px;
+}
+.navbar {
+    height: 120px;
+    width: 100%;
+    background-color: #003546;
+    border-color: #003546;
+}
+#link{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+#link:hover{
+    border-color: white;
+}
+#title{
+    display:flex;
+    background-color: #003546;
+    align-items: center;    
+}

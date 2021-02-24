@@ -1,0 +1,18 @@
+.logo{
+    width:135%;
+    display: flex;
+    justify-content: flex-start;
+}
+.logo > img {
+    height: 100%;
+    width: auto;
+}
+
+#img0{
+    width:100%;
+}
+.coords{
+    height: 100px;
+    width: 100%;
+}
+

@@ -1,0 +1,35 @@
+.green-widget{
+    background-color: #029583;
+    border: 1px solid #029583;
+    border-radius: 20px;
+    height:350px;
+    width:1304px; 
+}
+
+.green-widget img{
+    vertical-align: top;
+    float:right;
+    border: 1px solid #029583;
+    border-radius: 20px;
+    width:516px;
+    height: 275px;
+}
+
+.green-widget p{
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-family: PT Sans; 
+    font-style: bold;
+    font-size:48px
+}
+
+.green-widget a{
+    text-justify: center;
+    text-decoration:none;
+    color: #808080;
+    font-family: PT Sans;
+    font-weight: lighter;
+    font-style:oblique;
+    font-size:40px
+}
