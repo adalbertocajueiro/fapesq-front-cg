@@ -2,11 +2,16 @@ import React from 'react'
 
 import {Route,Switch,Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
-import Registros from './views/Registros'
 import Base from './views/Base'
 import Sobre from './views/Sobre'
 import MapaCG from './views/MapaCG'
 import MapaPB from './views/MapaPB'
+<<<<<<< Updated upstream
+import Alerta from './views/Alerta'
+=======
+import Registros from './views/Registros'
+
+>>>>>>> Stashed changes
 
 function Principal() {
   return (
@@ -20,15 +25,17 @@ function Principal() {
 						<Link to='/mapapb' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Mapa PB</Button></Link>
 						<Link to='/mapacg' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Mapa CG</Button></Link>
 						<Link to='/sobre' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Sobre</Button></Link>
+						<Link to='/alerta' className='text-decoration-none'><Button className='my-1' size="xl" block variant='light'>Sobre</Button></Link>
+
 					</div>
 					<div className='pt-2 mr-4 px-2 w-100'>
 					    <Switch>
-				          	<Route path='/' component={Registros} exact />
 				          	<Route path='/registros' component={Registros}/>
 				          	<Route path='/base' component={Base}/>
 				          	<Route path='/mapapb' component={MapaPB}/>
 				          	<Route path='/mapacg' component={MapaCG}/>
 				          	<Route path='/sobre' component={Sobre}/>
+										<Route path='/alerta' component={Alerta}/>
 				        </Switch>
 			        </div>
 				</div>

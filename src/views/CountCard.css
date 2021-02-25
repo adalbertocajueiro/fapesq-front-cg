@@ -1,0 +1,18 @@
+.cartao{
+    width: 357px;
+    height: 283px;
+    background-color:#003546;
+    border-radius: 20px;
+    text-align:center;
+    vertical-align: middle;
+    padding:30px;
+}
+
+.corpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    vertical-align: middle;
+}
+

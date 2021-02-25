@@ -1,0 +1,18 @@
+.confirmado{
+    width: 357px;
+    height: 283px;
+    background-color:#029583;
+    border-radius: 20px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+.corpo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    vertical-align: middle;
+}
+
