@@ -222,7 +222,8 @@ function Registros(){
 		}
 	}
 	return(
-		<div className='animated fadeIn mt-0 pt-0'>
+		<React.Fragment>
+			<div className='animated fadeIn mt-0 pt-0'>
 			<ModalViewRegistro show={show} handleClose={handleClose} registro={registroSelecionado}/>
   			<div align='justify'>
 	  			<div className='f-s-15'>
@@ -234,10 +235,11 @@ function Registros(){
 	  				<div className='col-2 mr-0'>
 	  					<OverlayTrigger 
       						placement='bottom'
-							overlay=
+							overlay= {
 							<Tooltip id='tooltip-select-estado'>
 								Selecione um estado para habilitar municípios
 							</Tooltip>
+							}
 						>
 							<Form.Control id='estado' as='select' className='f-s-13' onChange={()=>selectEstado()}>
 								<option hidden value='Estado'>Estado</option>
@@ -253,10 +255,11 @@ function Registros(){
 	  				<div className='col-2 mr-0'>
 	  					<OverlayTrigger 
       						placement='bottom'
-							overlay=
+							overlay={
 							<Tooltip id='tooltip-select-municipio'>
 								Selecione um município para habilitar bairros
 							</Tooltip>
+							}
 						>
 							<Form.Control id='municipio' as='select' className='f-s-13' disabled={estadoSelected === undefined} onChange={()=>selectMunicipio()}>
 						    	<option hidden value='Municipio'>Município</option>
@@ -270,10 +273,11 @@ function Registros(){
 	  				<div className='col-2 mr-0'>
 	  					<OverlayTrigger 
       						placement='bottom'
-							overlay=
+							overlay={
 							<Tooltip id='tooltip-select-bairro'>
 								Selecione um bairro
 							</Tooltip>
+							}
 						>
 							<Form.Control id='bairro' as='select' className='f-s-13' disabled={municipioSelected === undefined}>
 						    	<option hidden value='Bairro'>Bairro</option>
@@ -360,7 +364,9 @@ function Registros(){
 
   			</div>
   		</div>
+	</React.Fragment>
 	);
+	
 }
 
 export default Registros;

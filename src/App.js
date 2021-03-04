@@ -1,4 +1,4 @@
-import React ,{useEffect}from 'react';
+import React, { useEffect, useState }  from 'react';
 import * as bs from 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from 'react-router-dom'
 import './App.css';
@@ -8,21 +8,21 @@ import context from './utils/Context'
 import {BACK_END_URL} from './utils/Utils'
 import axios from 'axios'
 
-function App() {
+export default function App() {
+  
   const { Provider } = context;
-  const [state, setState] = React.useState({
-    dataInfo:undefined,
-    historicoPB:undefined
-  });
+
+  const [dataInfo, setDataInfo] = useState([])
+  const [historicoPB, setHistoricoPB] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
    
         const dataInfoBuscado = await axios.get(BACK_END_URL+'/registros');
-        setState({ ...state,  dataInfo:dataInfoBuscado.data});
+        setDataInfo({ dataInfo:dataInfoBuscado.data });
 
         const historicoPBBuscado = await axios.get(BACK_END_URL+'/pbdatafiltered');
-        setState({ ...state,  historicoPB:historicoPBBuscado.data});
+        setHistoricoPB({ historicoPB:historicoPBBuscado.data });
     }
     fetchData();
 
@@ -32,7 +32,8 @@ function App() {
   return (
     <Provider
       value={{
-        state
+        dataInfo,
+        historicoPB
       }}
     >
       <BrowserRouter>
@@ -40,6 +41,5 @@ function App() {
       </BrowserRouter>
     </Provider>
   );
+  
 }
-
-export default App;

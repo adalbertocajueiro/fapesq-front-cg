@@ -21,8 +21,6 @@ const gradient = [
 class MapContainer extends Component{
 
     render(){
-
-
         return(
             <div className="map-container">
             <Map
@@ -46,7 +44,7 @@ class MapContainer extends Component{
 }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyDuxEcCmAeZnCimhP-VZ7r4rco1CgXfe4k",
+    apiKey: "AIzaSyB6ojEK81feRmPwYkKoGoTWLdJnPacTKbs",
     libraries: ["visualization"]
   })(MapContainer);
   

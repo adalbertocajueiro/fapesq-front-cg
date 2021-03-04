@@ -14,10 +14,10 @@ function Mainpage(){
         <div className= 'main'>
             <div className='logo'>
                 <div id='img0'>
-                    <img src = {Logo} class='mw-100 rounded-float-left' alt='logotype'></img>     
+                    <img src = {Logo} className='mw-100 rounded-float-left' alt='logotype'></img>     
                 </div>
                 <div id='img1'>
-                    <img src = {Virus} class='mw-100 rounded-float-right' alt='covid'></img>
+                    <img src = {Virus} className='mw-100 rounded-float-right' alt='covid'></img>
                 </div>
             </div>
                 Acompanhamento de Casos de Covid-19 no estado da Paraíba
@@ -26,20 +26,20 @@ function Mainpage(){
                         Covid 19 - Campina Grande 
                     </p>
                 </h2>
-                <div class="mt-2 row">
-                    <section class="page-element col-xs-9 col-sm-9 col-md-9 col-lg-7">
+                <div className= "mt-2 row">
+                    <section className="page-element col-xs-9 col-sm-9 col-md-9 col-lg-7">
                         <RecoverCard />
                     </section>
-                    <section class="page-element col-xs-3 col-sm-3 col-md-3 col-lg-5">
+                    <section className="page-element col-xs-3 col-sm-3 col-md-3 col-lg-5">
                         <BlueCard />
                     </section>
                 </div>
 
-            <div class='mt-2 row'>
+            <div className='mt-2 row'>
                 <GreenWidget/>
             </div>
 
-            <div class='mt-2 row'>
+            <div className='mt-2 row'>
                 <BlueWidget/>
             </div>
             <div className='coords'>
