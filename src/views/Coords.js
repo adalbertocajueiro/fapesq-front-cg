@@ -11,19 +11,28 @@ const url = BACK_END_URL + '/area/' + cep + '/' + raio
 export default function Coords(props) {
 
     const [coords, setCoords] = useState([])
+    const [render, setRender] = useState(false)
 
     useEffect(() => {
         const temp = async () => {
             const response = await Axios.get(url)
             setCoords(response.data)
+            setRender(true)
         }
-        temp()
-    });
+        
+        if (render !== true) {
+            temp()
+        }
+    }, [coords]);
+
 
     return (
-        <div className='map'>
-            <MapContainer center={{ lat: -7.2025664, lng: -35.8998616 }} zoom={14} positions={coords} />
+        <React.StrictMode>
             { console.log(coords) }
+        <div className='map'>
+            {render === true && <MapContainer center={{ lat: -7.2025664, lng: -35.8998616 }} zoom={14} positions={coords} />}
         </div>
+        </React.StrictMode>
+        
     )
 }
